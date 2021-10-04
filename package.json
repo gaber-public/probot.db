@@ -1,0 +1,43 @@
+{
+  "name": "probot.db",
+  "version": "1.1.2",
+  "description": "ProBot embed messages feature based database, lol.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiJulian/probot.db.git"
+  },
+  "author": "Julian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiJulian/probot.db/issues"
+  },
+  "homepage": "https://github.com/xiJulian/probot.db#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": "npm run lint",
+    "*.{js,json}": "npm run format"
+  }
+}
